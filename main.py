@@ -17,6 +17,21 @@ def createDictEmployees(file):
 
     return employeesDict
 
-
+def getTimes(employees):
+    result = []
+    employeeKeys = employees.keys()
+    for employeeA in employeeKeys:
+        for employeeB in employees:
+            if employeeA != employeeB:
+                a = employees[employeeA]
+                b = employees[employeeB]
+                intersections = set(a.items()) & set(b.items())
+                if intersections.__len__() > 0:
+                    relation = [employeeA + "-" + employeeB , intersections.__len__()]
+                    result.append(relation)
+    return result
 
 employees = createDictEmployees("times1.txt")
+times = getTimes(employees)
+for time in times:
+    print("{}:{}".format(time[0],time[1]))
