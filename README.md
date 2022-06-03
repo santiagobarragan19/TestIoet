@@ -50,7 +50,7 @@ was the time in the office
 After that is compare the days in common that each employee have and the function 
 getTimes() counts how many times each employee has coincided in the office,
 where compares the day of employeeA and employeeB and returns a 1 if they coincided
-in the office on that day.
+in the office on that day, sum that and save the result and done.
 
 ## License
 
